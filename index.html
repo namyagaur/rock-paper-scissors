@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rock-Paper-Scissors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="game-board">
+    <h1>Rock Paper Scissors</h1>
+
+    <div class="button-group">
+  <button onclick="playGame('rock')">
+    Rock
+  </button>
+  <button onclick="playGame('paper')">
+    Paper
+  </button>
+  <button onclick="playGame('scissors')">
+    Scissors
+  </button>
+</div>
+
+
+    <p class="js-score"></p>
+    <p class="js-result"></p>
+    <p class="js-move"></p>
+
+    <div class="button-group">
+        <button onclick="
+            score.wins = 0;
+            score.losses = 0;
+            score.ties = 0;
+            localStorage.removeItem('score');
+            updateScoreElement();
+        ">Reset Score</button>
+
+        <button onclick="autoPlay();">Auto Play</button>
+    </div>
+  </div>
+
+  <script src="script.js">
+  </script>
+</body>
+
+</html>
